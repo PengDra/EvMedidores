@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D61EC74-EBEB-4844-90FD-00C5799F30FF}</ProjectGuid>
+    <ProjectGuid>{3AE4270D-C316-4930-B72F-FA30E5464EE2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lector</RootNamespace>
-    <AssemblyName>Lector</AssemblyName>
+    <RootNamespace>TareaPrograCliente</RootNamespace>
+    <AssemblyName>TareaPrograCliente</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Lector.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -47,23 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comunicacion\HebraCliente.cs" />
-    <Compile Include="Comunicacion\HebraServidor.cs" />
+    <Compile Include="Comunicacion\ClienteSocket.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EvMedidores\EvMedidores.csproj">
-      <Project>{c24db3ff-c089-461f-9047-4ccde9875ad0}</Project>
-      <Name>EvMedidores</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ServerSocketUtils\ServerSocketUtils.csproj">
-      <Project>{9645dabc-566b-4fe3-a0e4-b566e39cd2ec}</Project>
-      <Name>ServerSocketUtils</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

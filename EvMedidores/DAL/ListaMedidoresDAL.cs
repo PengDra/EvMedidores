@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EvMedidores.DAL
 {
-    public class ListaMedidoresDAL
+    public class ListaMedidoresDAL : IMedidoresDAL
     {
         //para implementar Singleton:
         //1. El contructor tiene que ser private
@@ -23,12 +23,12 @@ namespace EvMedidores.DAL
             return instancia;
 
         }
-        public static List<Medidor> ObtenerListaMedidores() {
+        public List<Medidor> ObtenerListaMedidores() {
 
             List<Medidor> lista = new List<Medidor>();
             lista.Add(new Medidor() { Id="1" });
-            lista.Add(new Medidor() { Id = "2" });
-            lista.Add(new Medidor() { Id = "3" });
+            lista.Add(new Medidor() { Id ="2" });
+            lista.Add(new Medidor() { Id ="3" });
 
             return lista;
         }
